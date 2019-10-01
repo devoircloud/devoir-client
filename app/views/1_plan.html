@@ -73,8 +73,9 @@
                   <div class="sppb-column-addons">
                     <div id="sppb-addon-1480644524" class="clearfix">
                       <div class="sppb-addon sppb-addon-text-block 0 sppb-text-center at-pricing-item">
-                        <div class="sppb-addon-content">
+                        <div class="sppb-addon-content" >
                           <div class="at-pricing-title">
+                            <span class="fas fa-check" id="small-plan" style="color: white; position: absolute; top: 50px; right: 50px; font-size: 15pt;"></span>
                             <h4>Small business</h4>
                             <h5>19.5 $ / month</h5>
                           </div>
@@ -85,7 +86,7 @@
                             <li>2000 Gb Bandwidth <em class="fa fa-check"><span style="text-decoration: underline;">icon</span></em></li>
                           </ul>
                           <div class="">
-                            <button class="btn btn-outline-dark btn-lg btn-block">
+                            <button class="btn btn-outline-dark btn-lg btn-block" onclick="return selectPlan('small-plan');">
                               Choose
                             </button>
                           </div>
@@ -102,6 +103,7 @@
                       <div class="sppb-addon sppb-addon-text-block 0 sppb-text-center at-pricing-item">
                         <div class="sppb-addon-content">
                           <div class="at-pricing-title">
+                            <span class="fas fa-check" id="medium-plan" style="color: white; position: absolute; top: 50px; right: 50px; font-size: 15pt;"></span>
                             <h4>Medium Business</h4>
                             <h5>39.5 $ / month</h5>
                           </div>
@@ -112,7 +114,7 @@
                             <li>3000Gb Bandwidth <em class="fa fa-check"><span style="text-decoration: underline;">icon</span></em></li>
                           </ul>
                           <div class="">
-                            <button class="btn btn-outline-dark btn-lg btn-block">
+                            <button class="btn btn-outline-dark btn-lg btn-block" onclick="return selectPlan('medium-plan');">
                               Choose
                             </button>
                           </div>
@@ -127,7 +129,7 @@
       </div>
       <div class="row  text-center">
         <div class="col-md-5 col-sm-3"></div>
-        <div class="col-sm-6 col-md-2"><a href="/2-select-server" class="btn btn-primary btn-next btn-lg btn-block">Next</a></div>
+        <div class="col-sm-6 col-md-2"><a href="/2-select-server" onclick="return isChecked();" class="btn btn-primary btn-next btn-lg btn-block" id="next-button">Next</a></div>
         <div class="col-md-5   col-sm-3"></div>
       </div>
     </main>
@@ -139,6 +141,7 @@
       </div>
     </div>
 
+
     <!-- Bootstrap core JavaScript
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -148,6 +151,56 @@
     <!-- build:js -->
     <script src="/assets/js/app.js"></script>
     <!-- endbuild -->
+
+    <script type="text/javascript">
+      let plan = undefined; // Selected plan
+      let baseUrl = undefined;
+
+      function isChecked() {
+        if (plan) {
+          
+          
+          // 
+          // console.log("Updating to "+baseUrl+'/'+plan);
+          return true;
+        }
+        alert("Please select one plan");
+        return false;
+      }
+
+      function selectPlan(newPlan) {
+        if (plan == newPlan) {
+          return false;
+        }
+        var fadeIn = '#small-plan';   // select
+        var fadeOut = '#medium-plan'; // unselect
+
+        console.log("New plan: "+newPlan);
+
+        if ('#' + newPlan != fadeIn) {
+          fadeIn = fadeOut;
+          fadeOut = '#small-plan';
+        }
+        console.log('Show '+fadeIn);
+        console.log('Hide '+fadeOut);
+
+        jQuery(fadeIn).fadeIn();  // show
+        jQuery(fadeOut).fadeOut();// hide
+        plan = newPlan;
+
+        if (!baseUrl) {
+          baseUrl = jQuery('#next-button').attr("href");
+        }
+        jQuery('#next-button').attr('href', baseUrl + '/' + plan);
+        
+        return true;
+      }
+
+      jQuery(document).ready(function(){ 
+        jQuery('#small-plan').hide();  // show
+        jQuery('#medium-plan').hide();
+       });
+    </script>
 
   </body>
 </html>

@@ -146,18 +146,14 @@ router.get('/1-select-plan', (req, res, next) => {
 });
 
 // get server selection page
-router.get('/2-select-server', (req, res, next) => {
-  // generate a new name
-  const name = Utils.randomString(5);
-
-  // new todo model
-  const newTodo = new Todo({ name, done: false });
-
-  newTodo.save()
-    .then((todo) => { console.log(`Success! ${todo.name} saved! \n${todo}`); })
-    .catch((err) => { console.log(err); });
-
-  res.render('2_server', { title: '2/4 Select plan' });
+router.get('/2-select-server/:plan', (req, res, next) => {
+  let plan = req.params.plan;
+  if (plan != 'small-plan' && plan != 'medium-plan') {
+    res.redirect('/1-select-plan');
+  }
+  else {
+    res.render('2_server', { title: '2/4 Select servers', plan: plan });
+  }
 });
 
 // get payment selection page
