@@ -23,9 +23,11 @@
 
 .compare-heading {
   font-size:14pt;
-  font-weight:bold !important;
   border-bottom:0 !important;
   padding-top:10px !important;
+}
+.compare-heading-selected {
+  font-weight: bold !important;
 }
 
 .comparison tbody tr:nth-child(odd) {
@@ -54,7 +56,7 @@
   text-align:left;
 }
   
-.comparison .qbse, .comparison .qbo, .comparison .tl {
+.comparison .qbse, .comparison .qbo, .comparison .tl, .comparison-title {
   color:#FFF;
   padding:10px;
   font-size:12pt;
@@ -64,6 +66,12 @@
 
 .comparison .tl2 {
   border-right:0;
+}
+
+.comparison-title {
+  background: #63c2de;
+  border-top-left-radius: 3px;
+  border-left:0px;
 }
 
 .comparison .qbse {

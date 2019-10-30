@@ -316,10 +316,11 @@ h1, h2, h3, h4, h5 {
     color: #000;
 }
 .sppb-section-title h3 {
-    background: url(/../../assets/img/main_page/border-title.png) no-repeat bottom center;
-    padding-bottom: 50px;
+    /*background: url(/../../assets/img/main_page/border-title.png) no-repeat bottom center;*/
+    /*padding-bottom: 50px;*/
     letter-spacing: 1.5px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 45px;
     text-transform: uppercase;
 }
 .sppb-section-title h2 {
@@ -334,7 +335,7 @@ h1, h2, h3, h4, h5 {
 }
 .at-button {
     padding: 10px 20px;
-    border: 2px solid #e1e1e1;
+    border: 2px solid #1e78cb94;
     color: #3f3f3f;
     text-transform: uppercase;
 }
@@ -342,7 +343,11 @@ h1, h2, h3, h4, h5 {
     color: #fff;
 }
 .tp-caption {
-    padding: 40px!important;
+    padding: 25px!important;
+    font-size: 18pt;
+    font-weight: bolder;
+    color: #255f82;
+    text-shadow: 1px 1px #ffffff47;
 }
 h4 {
     font-size: 24px;
@@ -627,13 +632,14 @@ h5 {
 }
 /***** SERVICES *****/
 #at-services h3 {
-    background: url(../../img/main_page/border-title-services.png) bottom center no-repeat;
-    padding-bottom: 50px;
+/*    background: url(../../img/main_page/border-title-services.png) bottom center no-repeat;
+*/    padding-bottom: 0px;
+*/    padding-top: 40px;
 }
 .at-services-item h4 {
     margin: 20px 0 15px;
-    background: url(../../img/main_page/border-title-service-item.png) bottom center no-repeat;
-    padding-bottom: 20px;
+/*    background: url(../../img/main_page/border-title-service-item.png) bottom center no-repeat;
+*/    padding-bottom: 20px;
 }
 .at-services-item {
     margin: 20px 0;
@@ -1229,6 +1235,10 @@ h5 {
     border-bottom: 3px solid #adadad;
 }
 /***** K2 *****/
+.sppb-section {
+    margin-top: 0px;
+}
+
 div.itemContainer {
     width: 100%!important;
 }
@@ -1278,11 +1288,11 @@ div.itemContainer {
 }
 /***** PRICING *****/
 #at-pricing {
-    border-top: 1px solid #f1f1f1;
-    border-bottom: 1px solid #f1f1f1;
+    /*border-top: 1px solid #f1f1f1;*/
+    /*border-bottom: 1px solid #f1f1f1;*/
 }
 #at-clients {
-    border-bottom: 1px solid #f1f1f1;
+    /*border-bottom: 1px solid #f1f1f1;*/
 }
 .at-pricing-title {
     background: url(../../img/main_page/background-item-pricing.png) no-repeat;

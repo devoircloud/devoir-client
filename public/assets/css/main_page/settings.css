@@ -533,7 +533,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 
 
 .tp-button.blue, .tp-button:hover.blue,
-.purchase.blue, .purchase:hover.blue			{ background-color:#1d78cb; -webkit-box-shadow:  0px 3px 0px 0px #0f3e68;        -moz-box-shadow:   0px 3px 0px 0px #0f3e68;        box-shadow:   0px 3px 0px 0px #0f3e68}
+.purchase.blue, .purchase:hover.blue			{ background-color:#1d78cb; }
 
 
 .tp-button.red, .tp-button:hover.red,

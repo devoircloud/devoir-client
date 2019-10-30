@@ -1,3 +1,38 @@
+.plans {
+  text-decoration: none;
+}
+
+.plans li {
+  text-decoration: none;
+  padding: 10px;
+  /*color:#FFF;*/
+  background: #63c2de;
+  border-top-left-radius: 3px;
+  border-left:0px;
+  border: 1px solid #ffffff0f;
+  margin: 5px;
+  color: #000;
+  list-style: none;
+}
+
+.plans .compeleted {
+  background: #009E2C;
+  color: #fff;
+}
+
+.plans span {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.plans .pointer {
+/*    margin-left: -11px;
+*/    margin-right: 10px;
+}
+
 #portfolio-module-136 .projects-wrapper .project-img .project-img-extra .project-icon {
   background-color: #1b1b1b;
 }

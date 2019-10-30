@@ -818,6 +818,7 @@ dl.article-info dd.hits span[class*=" icon-"] {
     margin-top: 19px;
     padding: 0 15px;
     text-transform: uppercase;
+    border: 1px solid #00000000;
 }
 .sp-megamenu-parent >li.sp-has-child>a:after {
   font-family: "FontAwesome";
@@ -2021,7 +2022,7 @@ ul.social-icons >li a {
   margin: 0 3px;
 }
 #sp-header {
-  height: 90px;
+  /*height: 90px;*/
 }
 #sp-header .logo {
   display: inline-block;
