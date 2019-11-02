@@ -44,6 +44,18 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.margin-top-lg {
+  padding-top: 1.5em;
+}
+
+.theme-color {
+  color: #246286;
+}
+
+.theme-color-dark {
+  color: #1a4965;
+}
+
 *,
 *::before,
 *::after {
@@ -4069,13 +4081,17 @@ input[type="button"].btn-block {
   }
 }
 
+nav {
+  margin-top: 15px;
+}
+
 .nav {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 0
   list-style: none;
 }
 
