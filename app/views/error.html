@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="Ferdinand Tugano" />
+    <link rel="icon" href="favicon.ico" />
+
+    <title>
+      Register on Devoir
+    </title>
+
+    <!-- Icons for this template -->
+    <link
+      href="/assets/fonts/font_awesome_all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Stylesheet -->
+    <!-- build:css -->
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body class="color-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-md mb-4">
+            <a href="/"><img src="/assets/img/logo.png"></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+              aria-controls="navbarCollapse"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+              </ul>
+              <div class="form-inline mt-2 mt-md-0">
+                <a class="btn btn-outline-primary my-2 my-sm-0" href="/login">
+                  <i class="fas fa-search" aria-hidden="true"></i> Login
+                </a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <main role="main" class="container ">
+        <div class=" text-center">
+          <h1 class="theme-color">Register</h1>
+          <p class="theme-color-dark">Please register on Devoir by your Email address.</p>
+          <!--           <p>Devoir uses Wallet to log in. But for now we use testable account</p>
+          -->          
+          <% if (typeof errors != 'undefined') { %>
+            <% errors.forEach(function(error) { %>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <%= error.msg %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% }); %>
+          <% } %>
+          <% if (success_msg != '') { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <%= success_msg %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% } %>
+          <% if (error_msg != '') { %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <%= error_msg %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% } %>
+          <% if (error != '') { %>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <%= error.status %>
+              <%= error.message %>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          <% } %>
+        </div>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form class="text-center" method="post" action="/register">
+                <div class="input-group mb-3">
+                <input
+                  class="form-control mr-sm-2"
+                  type="text"
+                  placeholder="full name"
+                  aria-label="Full Name"
+                  name="name"
+                  value="<%= typeof name != 'undefined' ? name : '' %>"
+                  required="required"
+                /></div>
+                <div class="input-group mb-3">
+                <input
+                  class="form-control mr-sm-2"
+                  type="text"
+                  placeholder="e-mail"
+                  aria-label="E-mail",
+                  name="email"
+                  value="<%= typeof email != 'undefined' ? email : '' %>"
+                  required="required"
+                /></div>
+                <div class="input-group mb-3">
+                <input
+                  class="form-control mr-sm-2"
+                  type="password"
+                  placeholder="****"
+                  aria-label="Password"
+                  name="password"
+                  required="required"
+                /></div>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">
+                  <i class="fas" aria-hidden="true"></i> Register
+                </button>
+                <!-- <a href="/1-select-plan">Register</a> -->
+            </form>
+          </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/assets/js/vendor/jquery.min.js"></script>
+    <script src="/assets/js/vendor/popper.min.js"></script>
+    <script src="/assets/js/vendor/bootstrap.min.js"></script>
+    <!-- build:js -->
+    <script src="/assets/js/app.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
