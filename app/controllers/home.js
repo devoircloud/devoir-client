@@ -206,7 +206,8 @@ router.get('/5-after-payment', (req, res, next) => {
 // get content manager page
 router.get('/content-manager', ensureAuthenticated, (req, res) => {
   res.render('manager_content', { title: 'Content Manager',
-  user: req.user });
+  // user: req.user });
+  user: 'CDN' });
 });
 
 // get server manager page

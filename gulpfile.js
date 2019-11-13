@@ -81,9 +81,9 @@ gulp.task('deploy', function() {
   // Staging
   // if (argv.staging) {
     
-    rsyncConf.hostname = sshConfig.host; // hostname
-    rsyncConf.username = sshConfig.username; // ssh username
-    rsyncConf.destination = serverDestination; // path where uploaded files go
+  rsyncConf.hostname = sshConfig.host; // hostname
+  rsyncConf.username = sshConfig.username; // ssh username
+  rsyncConf.destination = serverDestination; // path where uploaded files go
     
   // // Production
   // } else if (argv.production) {
