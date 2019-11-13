@@ -243,6 +243,30 @@
     </header>
     <div class="app-body" style="margin-top: 5em;">
         <div class="container-fluid">
+          <!-- Almost ready Tip -->
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 animated fadeIn">
+              <div class="card ">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h4 class="card-title mb-0">CDN is almost Ready</h4>
+                    </div>
+                  </div>
+                  <div class="row margin-top-lg">
+  			           <div class="col-md-8 col-md-offset-2">
+                    <p>Your CDN is almost ready at the address <a href="//<%= user %>.devoir.online/">http://<%= user %>.devoir.online/</a><br>Please upload your website content onto servers in order to make alive your website</p>
+  			           </div>
+  			          </div>
+                </div>
+              </div>
+              <!-- /.row-->
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <!-- Almost ready Tip end -->
+          <!-- Upload form -->
           <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6 animated fadeIn">
@@ -255,12 +279,12 @@
                     </div>
                   </div>
                   <div class="row margin-top-lg">
-  			           <div class="col-md-8 col-md-offset-2">
-  			              <form action="/upload" method="post" class="form-group btn-group">
-                        <input type="file" name="archive" style="margin-bottom: 0.5em;">
+                   <div class="col-md-8 col-md-offset-2">
+                      <form action="/upload" method="post" class="form-group btn-group">
+                        <input type="file" name="archive" value="Upload .zip archive" style="margin-bottom: 0.5em;">
                         <input type="submit" name="" class="btn btn-primary">
-  			              </form>
-  			           </div>
+                      </form>
+                   </div>
   			          </div>
                 </div>
               </div>
@@ -268,6 +292,63 @@
             </div>
             <div class="col-md-3"></div>
           </div>
+          <!-- Upload form end -->
+          <!-- Server info -->
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 animated fadeIn">
+              <div class="card ">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h4 class="card-title mb-0">Hosting info</h4>
+                    </div>
+                  </div>
+                  <div class="row margin-top-lg">
+                   <div class="col-md-8 col-md-offset-2">
+                    <ul>
+                      <li>Available servers: 3</li>
+                      <li>Content distribution: optimized for<br>
+                        <ul>
+                          <li>North and South America by Server #1</li>
+                          <li>Europe and Africa by Server #2</li>
+                          <li>Asia and Oceania by Server #3</li>
+                        </ul>
+                      </li>
+                      <li>Given storage in each server: 1GB</li>
+                    </ul>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.row-->
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <!-- Server info end -->
+          <!-- Free version Tip -->
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 animated fadeIn">
+              <div class="card ">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-5">
+                      <h4 class="card-title mb-0">This is free</h4>
+                    </div>
+                  </div>
+                  <div class="row margin-top-lg">
+                   <div class="col-md-8 col-md-offset-2">
+                    <p>Devoir is in Alpha version. Devoir CDN providing will be free during the Alpha session.</p>
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.row-->
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <!-- Free version Tip end -->
         </div>
     </div>
     <footer class="app-footer">
