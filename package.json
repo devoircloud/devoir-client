@@ -55,7 +55,7 @@
     "regenerator-runtime": "^0.13.2",
     "serve-favicon": "^2.5.0",
     "simple-line-icons": "2.4.1",
-    "validator": "^11.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
