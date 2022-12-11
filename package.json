@@ -33,7 +33,7 @@
     "core-js": "^3.1.4",
     "debug": "^3.2.6",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "flag-icon-css": "^3.3.0",
     "font-awesome": "~4.7.0",
